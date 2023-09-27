@@ -20,9 +20,9 @@ author:
 
 Dans le cadre de la régression on peux utiliser la variance comme mesure d'homogénéité.Car la variance quantifie la dispersion des valeurs de la variable cible (Y) autour de leur moyenne.
 
-- Si la variance est élevée : alors les valeurs de Y sont dispersées sur une plage plus large ce qui indique une hétérogénéité élevée entre les données.
+Si la variance est élevée : alors les valeurs de Y sont dispersées sur une plage plus large ce qui indique une hétérogénéité élevée entre les données.
 
-- Si la variance est faible : alors les valeurs de Y sont regroupées plus étroitement autour de leur moyenne ce qui indique une homogénéité plus élevée entre les données.
+Si la variance est faible : alors les valeurs de Y sont regroupées plus étroitement autour de leur moyenne ce qui indique une homogénéité plus élevée entre les données.
 
 ### Question 2 <a name="Question 2"></a>
 
