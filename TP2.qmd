@@ -46,7 +46,7 @@ plt.rc('axes', labelsize=6)
 plt.rc('font', size=12)
 plt.rc('legend', fontsize=12)
 plt.rc('text', usetex=False)
-plt.rc('figure', figsize=(10, 12))
+plt.rc('figure', figsize=(8, 8))
 
 # Configuration de seaborn
 sns.set_context("poster")
@@ -60,7 +60,7 @@ plt.figure(figsize=(8, 6))
 data[:, 2] += 1
 scatter = sns.scatterplot(x=data[:, 0], y=data[:, 1], hue=data[:, 2], palette="viridis", s=50)
 plt.title("Données générées avec rand_checkers")
-scatter.legend(title="Classe", bbox_to_anchor=(1.05, 1), loc='upper left')
+scatter.legend(title="Classe", bbox_to_anchor=(1, 1), loc='upper left')
 plt.grid(True)
 plt.show()
 ```
@@ -96,7 +96,7 @@ scores_gini = np.zeros(dmax)
 
 error_data = {'Max Depth': [], 'Error (Entropy)': [], 'Error (Gini)': []}
 
-plt.figure(figsize=(15, 10))
+plt.figure(figsize=(8, 6))
 for i in range(dmax):
     dt_entropy = tree.DecisionTreeClassifier(criterion='entropy', max_depth=i+1)
     dt_entropy.fit(X_train, Y_train)
@@ -159,9 +159,9 @@ Nous allons maintenant illustrer la classification obtenue en utilisant la profo
 Nous allons exploiter la fonction export_graphviz() du module tree pour générer un graphique représentant l'arbre résultant de la question précédente. Ce graphique sera sauvegardé sous le nom "arbre.png" dans le répertoire "Plots" du dépôt Git de ce TP.
 
 ```{python}
-"""#| eval: FALSE
+#| eval: FALSE
 #| echo: FALSE
-dot_data = tree.export_graphviz(dt_entropy, out_file=None)
+"""dot_data = tree.export_graphviz(dt_entropy, out_file=None)
 graph = graphviz.Source(dot_data)
 graph.render("./Plots/arbre", format='png')"""
 ```
@@ -274,7 +274,7 @@ La meilleure valeur pour la profondeur est $8$ pour cette graine là.
 Dans cette étape, nous allons créer des courbes d'apprentissage en faisant varier la taille de l'ensemble d'entraînement. Ces courbes nous fourniront des scores pour différentes tailles d'ensemble. De plus, nous inclurons les "intervalles de confiance", qui représentent la dispersion des scores obtenus lors de la validation croisée.
 
 ```{python}
-dt = tree.DecisionTreeClassifier(criterion='entropy', max_depth=best_depth)
+dt = tree.DecisionTreeClassifier(criterion='entropy')
 n_samples, train_scores, test_scores = learning_curve(dt, X_train, Y_train, cv=5)
 train_scores_mean = np.mean(train_scores, axis=1)
 train_scores_std = np.std(train_scores, axis=1)
