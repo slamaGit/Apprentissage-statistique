@@ -74,11 +74,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body>
+<body class="fullcontent">
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="TP2.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -155,18 +154,18 @@ L'erreur avec le critère d'entropie est : 0.0</code></pre>
 <div class="cell" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
 <pre><code>    Max Depth  Error (Entropy)  Error (Gini)
-0           1         0.727679      0.727679
-1           2         0.707589      0.696429
-2           3         0.669643      0.665179
-3           4         0.645089      0.636161
-4           5         0.616071      0.611607
-5           6         0.591518      0.595982
-6           7         0.580357      0.473214
-7           8         0.479911      0.375000
-8           9         0.397321      0.258929
-9          10         0.236607      0.073661
-10         11         0.122768      0.044643
-11         12         0.042411      0.022321</code></pre>
+0           1         0.734375      0.734375
+1           2         0.709821      0.709821
+2           3         0.698661      0.694196
+3           4         0.680804      0.680804
+4           5         0.665179      0.678571
+5           6         0.658482      0.649554
+6           7         0.575893      0.500000
+7           8         0.464286      0.399554
+8           9         0.337054      0.154018
+9          10         0.212054      0.082589
+10         11         0.102679      0.060268
+11         12         0.053571      0.033482</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <p><img src="TP2_files/figure-html/cell-5-output-2.png" width="1147" height="785"></p>
@@ -195,7 +194,7 @@ L'erreur avec le critère d'entropie est : 0.0</code></pre>
 <span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>plt.draw()</span>
 <span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Best scores with entropy criterion: "</span>, dt_entropy.score(X_train, Y_train))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Best scores with entropy criterion:  0.9575892857142857</code></pre>
+<pre><code>Best scores with entropy criterion:  0.9464285714285714</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <pre><code>&lt;Figure size 768x768 with 0 Axes&gt;</code></pre>

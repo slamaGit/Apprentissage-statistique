@@ -1,7 +1,7 @@
 ---
 title: "Rapport TP2 Arbres"
 author: "Hamza Slama"
-format: pdf
+format: html
 ---
 
 ## Classification avec les arbres 
