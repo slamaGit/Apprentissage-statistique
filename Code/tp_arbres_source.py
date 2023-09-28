@@ -4,7 +4,7 @@
 """
 
 ############################################################################
-#                Import part
+#%%               Import part
 ############################################################################
 import numpy as np
 import matplotlib.pyplot as plt
@@ -183,3 +183,5 @@ def frontiere(f, X, y, w=None, step=50, alpha_choice=1, colorbar=True,
                  [min_tot0 * -w[1] / w[2] - w[0] / w[2],
                   max_tot0 * -w[1] / w[2] - w[0] / w[2]],
                  "k", alpha=alpha_choice)
+
+# %%
